@@ -51,34 +51,34 @@ const RSVPForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-4 md:p-6 rounded-xl shadow-md border border-kazakh-gold/20">
-      <h2 className="text-xl md:text-2xl font-dancing text-center mb-4 md:mb-6 text-kazakh-blue">RSVP</h2>
+    <div className="max-w-md mx-auto bg-white p-4 md:p-6 rounded-xl shadow-md border border-[#a8a27a]/30">
+      <h2 className="text-xl md:text-2xl font-dancing text-center mb-4 md:mb-6 text-[#a8a27a]">RSVP</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
         <div>
-          <Label htmlFor="name" className="text-kazakh-darkBlue text-sm md:text-base">Ваше имя</Label>
+          <Label htmlFor="name" className="text-[#333333] text-sm md:text-base">Ваше имя</Label>
           <Input
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="border-kazakh-gold/30 focus:border-kazakh-gold focus:ring-kazakh-gold mt-1"
+            className="border-[#a8a27a]/30 focus:border-[#a8a27a] focus:ring-[#a8a27a] mt-1"
             placeholder="Введите ваше имя"
           />
         </div>
         
         <div className="space-y-2">
-          <Label className="text-kazakh-darkBlue text-sm md:text-base">Ваш ответ</Label>
+          <Label className="text-[#333333] text-sm md:text-base">Ваш ответ</Label>
           <RadioGroup value={attendance} onValueChange={setAttendance} className="mt-1">
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="yes" id="yes" className="text-kazakh-gold" />
+              <RadioGroupItem value="yes" id="yes" className="text-[#a8a27a]" />
               <Label htmlFor="yes" className="text-sm md:text-base">Я приду</Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="yes_with_pair" id="yes_with_pair" className="text-kazakh-gold" />
+              <RadioGroupItem value="yes_with_pair" id="yes_with_pair" className="text-[#a8a27a]" />
               <Label htmlFor="yes_with_pair" className="text-sm md:text-base">Я приду с парой</Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="no" id="no" className="text-kazakh-gold" />
+              <RadioGroupItem value="no" id="no" className="text-[#a8a27a]" />
               <Label htmlFor="no" className="text-sm md:text-base">К сожалению, не смогу прийти</Label>
             </div>
           </RadioGroup>
@@ -86,7 +86,7 @@ const RSVPForm = () => {
         
         <Button
           type="submit"
-          className="bg-kazakh-blue hover:bg-kazakh-darkBlue text-white w-full text-sm md:text-base"
+          className="bg-[#a8a27a] hover:bg-[#8a856a] text-white w-full text-sm md:text-base"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Отправка..." : "Отправить ответ"}
