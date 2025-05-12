@@ -7,7 +7,11 @@ interface OrnamentProps {
 
 const KazakhOrnament = ({ className = "" }: OrnamentProps) => {
   return (
-    <div className={`ornament-divider my-8 ${className}`}></div>
+    <div className={`flex items-center justify-center my-6 md:my-10 ${className}`}>
+      <div className="ornament-divider w-full max-w-md">
+        <div className="kazakh-ornament-element"></div>
+      </div>
+    </div>
   );
 };
 

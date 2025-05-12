@@ -9,7 +9,7 @@ interface Photo {
   alt: string;
 }
 
-// Примеры фотографий (можно заменить на реальные)
+// Example photos (can be replaced with real ones)
 const weddingPhotos: Photo[] = [
   {
     src: "https://images.unsplash.com/photo-1608322368735-b6b6ee1ff740?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -34,14 +34,14 @@ const PhotoGallery = () => {
 
   return (
     <div className="my-8">
-      <h2 className="text-2xl md:text-3xl font-dancing text-kazakh-blue mb-6 text-center">Наши фотографии</h2>
+      <h2 className="text-2xl md:text-3xl font-dancing text-[#8B5D33] mb-6 text-center">Наши фотографии</h2>
       
       <Carousel className="w-full max-w-md mx-auto">
         <CarouselContent>
           {weddingPhotos.map((photo, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card className="border-kazakh-gold/20 overflow-hidden">
+                <Card className="border-[#8B5D33]/20 overflow-hidden">
                   <CardContent className="p-0">
                     <img 
                       src={photo.src} 
@@ -54,11 +54,11 @@ const PhotoGallery = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={`${isMobile ? "-left-2" : "-left-12"}`} />
-        <CarouselNext className={`${isMobile ? "-right-2" : "-right-12"}`} />
+        <CarouselPrevious className={`${isMobile ? "-left-2" : "-left-12"} bg-[#8B5D33] text-white border-[#8B5D33] hover:bg-[#8B5D33]/80 hover:text-white`} />
+        <CarouselNext className={`${isMobile ? "-right-2" : "-right-12"} bg-[#8B5D33] text-white border-[#8B5D33] hover:bg-[#8B5D33]/80 hover:text-white`} />
       </Carousel>
       
-      <p className="text-center text-sm text-kazakh-blue/70 mt-4">
+      <p className="text-center text-sm text-[#8B5D33]/70 mt-4">
         Пролистайте чтобы увидеть больше фотографий
       </p>
     </div>
